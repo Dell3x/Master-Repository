@@ -22,6 +22,8 @@ public class Planet : MonoBehaviour
 
     private void PlanetRotation()
     {
-        planetTransform.DORotate(planetRotation, durationOfRotation, RotateMode.FastBeyond360);
+        planetTransform.DORotate(planetRotation, durationOfRotation, RotateMode.FastBeyond360)
+        .SetEase(Ease.Linear)
+        .OnComplete(PlanetRotation);
     }
 }
