@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Ogma
-  m_Shader: {fileID: 4800000, guid: 2b63a18536f01a84ea44b4a20e3d9950, type: 3}
+  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _SUBATMOSPHERE_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -56,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: ac5346bc37cce2744ad91b43d855f325, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emissive:
@@ -164,7 +164,9 @@ Material:
     - _Float2: 0
     - _Float3: 1
     - _Gloss: 0
+    - _GlossMapScale: 1
     - _Glossiness: 0.5
+    - _GlossyReflections: 1
     - _MaskClipValue: 0.5
     - _Metallic: 0
     - _Mode: 0
@@ -173,6 +175,8 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PlanetSize: 1
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
     - _Specularpower: 0.099
     - _SrcBlend: 1
     - _SubAtmosphere: 1

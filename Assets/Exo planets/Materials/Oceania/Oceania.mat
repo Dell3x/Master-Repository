@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Oceania
   m_Shader: {fileID: 4800000, guid: 2b63a18536f01a84ea44b4a20e3d9950, type: 3}
-  m_ShaderKeywords: _ACTIVATESPECULAR_ON _ATMOSPHERE_ON _CLOUDS_ON _METALLICGLOSSMAP
+  m_ShaderKeywords: _ACTIVATESPECULAR_ON _ATMOSPHERE_ON _CLOUDS_ON _EMISSION _METALLICGLOSSMAP
     _NODE_9266_ON _SUBATMOSPHERE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
