@@ -7,15 +7,14 @@ public class Planet : MonoBehaviour
 {
     public Vector3 planetRotation;
     private Transform planetTransform;
-
+    private AudioSource audioSource;
 
     [SerializeField] private float durationOfRotation;
-
-
 
     private void Start()
     {
         planetTransform = GetComponent<Transform>();
+        audioSource = GetComponent<AudioSource>();
 
         PlanetRotation();
     }
@@ -24,6 +23,6 @@ public class Planet : MonoBehaviour
     {
         planetTransform.DORotate(planetRotation, durationOfRotation, RotateMode.FastBeyond360)
         .SetEase(Ease.Linear)
-        .OnComplete(PlanetRotation);
+        .OnComplete(() => { PlanetRotation(); audioSource.Play(); });
     }
 }
