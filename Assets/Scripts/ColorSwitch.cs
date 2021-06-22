@@ -5,12 +5,9 @@ using DG.Tweening;
 
 public class ColorSwitch : MonoBehaviour
 {
-    private MeshRenderer planetRenderer;
-
+    [SerializeField] MeshRenderer planetRenderer;
     private void Start()
     {
-        planetRenderer = GetComponent<MeshRenderer>();
-
         ChangingColor();
     }
 
