@@ -7,22 +7,54 @@ public class CardDisplay : MonoBehaviour
 {
     public Card card;
 
-    public Text nameText;
-    public Text descriptionText;
+    private int cardCount;
 
-    public Image artworkImage;
 
-    public Text manaCostText;
-    public Text healthText;
-    public Text attacktext;
+    [SerializeField] private Text nameText;
+    [SerializeField] private Text descriptionText;
+
+    [SerializeField] private Image artworkImage;
+
+    [SerializeField] private Text manaCostText;
+    [SerializeField] private Text healthText;
+    [SerializeField] private Text attacktext;
+
+    [Header("Cards")]
+
+    [SerializeField] private Object[] cardsInfo;
+
 
     private void Start()
     {
+        cardsInfo = Resources.LoadAll("SO");
+    }
+    private void Update()
+    {
+        card = (Card)cardsInfo[cardCount];
+
         nameText.text = card.cardName;
         descriptionText.text = card.description;
         artworkImage.sprite = card.artWork;
         manaCostText.text = card.manaCost.ToString();
         healthText.text = card.health.ToString();
         attacktext.text = card.attack.ToString();
+    }
+
+    public void NextCard()
+    {
+        cardCount++;
+        if (cardCount == 5)
+        {
+            cardCount = 0;
+        }
+    }
+
+    public void PreviousCard()
+    {
+        if (cardCount == 0)
+        {
+            cardCount = 5;
+        }
+        cardCount--;
     }
 }
